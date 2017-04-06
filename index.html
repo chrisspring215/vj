@@ -2,40 +2,45 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <!--
-       <div class="background-div1">
-           
-       </div>
-       -->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-       <div id="output" class="output">
-        &nbsp;
-       </div>
-       <div id="controls">
-           <select id="video1" onchange="selectVideo1()">
-               
-           </select>
-           <select id="video2">
-               
-           </select>
-           <div id="blend-modes">
-           </div>
-           
-       </div>
-        <script src="js/main.js"></script>
-    </body>
+    <!--
+    <div class="background-div1">
+
+    </div>
+    -->
+
+    <div id="output" class="output">
+    &nbsp;
+    </div>
+
+    <div id="controls">
+        <select id="video1" onchange="selectVideo1()">   
+        </select>
+        <div>
+            <span id="faderOutputLeft"></span>
+            <input id="channelFadder" type="range" min="-100" max="100" defaultvalue="-100" onchange="channelFadder(value)">
+            <span id="faderOutputRight"></span>
+        </div>
+        <select id="video2">
+        </select>
+
+        <div id="blend-modes">
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
 </html>
